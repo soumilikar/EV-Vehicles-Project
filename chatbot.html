@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Chatbot Assistant</title>
+    <style>
+        /* General Layout */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f4f7f6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #004d40;
+            border-bottom: 2px solid #004d40;
+            padding-bottom: 10px;
+        }
+
+        /* --- Chat Specific Styles --- */
+        #chat-container {
+            width: 100%;
+            max-width: 600px;
+            height: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        #chat-header {
+            background-color: #004d40;
+            color: white;
+            padding: 15px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            font-weight: bold;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        #chat-messages {
+            flex-grow: 1;
+            padding: 15px;
+            overflow-y: auto;
+            border-bottom: 1px solid #eee;
+        }
+
+        .chat-message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 85%;
+        }
+
+        .user-message {
+            background-color: #dcf8c6;
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .bot-message {
+            background-color: #f1f0f0;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        #chat-input-form {
+            display: flex;
+            padding: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        #chat-input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        #chat-submit {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #back-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="back-link">
+        <a href="index.html">← Back to Main Form</a>
+    </div>
+    <h1>💬 EV Conversational Assistant</h1>
+
+    <div id="chat-container">
+        <div id="chat-header">Ask me about your ideal EV!</div>
+        <div id="chat-messages">
+            <div class="chat-message bot-message">Welcome! I can help you find your perfect EV segment. Just tell me
+                your **Max Price** and **Min Range**!</div>
+        </div>
+        <form id="chat-input-form">
+            <input type="text" id="chat-input" placeholder="Type your max price..." required>
+            <button type="submit" id="chat-submit">Send</button>
+        </form>
+    </div>
+
+    <script src="chatbot_script.js"></script>
+</body>
+
+</html>
