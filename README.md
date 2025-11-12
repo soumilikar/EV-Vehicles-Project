@@ -21,4 +21,5 @@ The chatbot can also compare segments directly: "Is the range difference between
 
 Sample Chatbot Conversation:
 
-<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/f53abc2c-5cb9-4052-96a0-3569af9deebc" />
+<img width="996" height="527" alt="Screenshot 2025-11-03 000750" src="https://github.com/user-attachments/assets/c31e4962-5932-49f1-a420-eb2790ca3d78" />
+
