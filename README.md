@@ -23,3 +23,9 @@ Sample Chatbot Conversation:
 
 <img width="996" height="527" alt="Screenshot 2025-11-03 000750" src="https://github.com/user-attachments/assets/c31e4962-5932-49f1-a420-eb2790ca3d78" />
 
+Final Project:
+
+<img width="1475" height="795" alt="image" src="https://github.com/user-attachments/assets/5f667cca-e132-4ac4-aabe-d2deec535fb5" />
+
+<img width="1688" height="913" alt="image" src="https://github.com/user-attachments/assets/4b8392bf-ac34-476b-a9a7-1b8c58af77e3" />
+
