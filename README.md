@@ -19,6 +19,17 @@ Customer Guidance: A user can input their non-price priorities (e.g., "Max 6.0 s
 A user provides their desired specs (e.g., "I want a car with 500 range, 5-second acceleration, and a price under €60,000"). The chatbot then presents all cars in the database that meet those specs.
 The chatbot can also compare segments directly: "Is the range difference between a C-Segment and D-Segment significant?" The answer is based on the trained model's feature importance and split points.
 
-Sample Chatbot Conversation:
 
-<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/f53abc2c-5cb9-4052-96a0-3569af9deebc" />
+### Final Project:
+
+**Input Page:**
+
+<img width="1475" height="795" alt="image" src="https://github.com/user-attachments/assets/5f667cca-e132-4ac4-aabe-d2deec535fb5" />
+
+<img width="1561" height="667" alt="image" src="https://github.com/user-attachments/assets/b0852056-6901-42b5-b985-6ac9440310f4" />
+
+**Results Page:**
+
+<img width="1691" height="776" alt="image" src="https://github.com/user-attachments/assets/447422e4-b86a-441d-9f0e-eeb798e0c96d" />
+
+
