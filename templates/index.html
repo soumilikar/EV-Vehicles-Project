@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}EV Segment Recommender{% endblock %}
+{% block content %}
+    <h1>🚗 EV Segment & Model Recommender</h1>
+
+    <div id="nav-link">
+        <a href="{{ url_for('chat_start') }}">💬 Prefer a Conversation? Try the EV Chatbot!</a>
+    </div>
+
+    <form action="{{ url_for('predict') }}" method="POST">
+        <h2>Input Your Requirements</h2>
+
+        <div class="input-group">
+            <label for="PriceEuro">Max Budget (€):</label>
+            <input type="number" id="PriceEuro" name="PriceEuro" value="45000" required>
+        </div>
+        <div class="input-group">
+            <label for="Range_Km">Min Range (km):</label>
+            <input type="number" id="Range_Km" name="Range_Km" value="400" required>
+        </div>
+        <div class="input-group">
+            <label for="AccelSec">Max 0-100km/h (seconds):</label>
+            <input type="number" id="AccelSec" name="AccelSec" step="0.1" value="7.0" required>
+        </div>
+        <div class="input-group">
+            <label for="BodyStyle">Body Style:</label>
+            <select id="BodyStyle" name="BodyStyle" required>
+                {% for style in body_styles %}
+                <option value="{{ style }}">{{ style }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <button type="submit">Get Recommendation</button>
+    </form>
+{% endblock %}

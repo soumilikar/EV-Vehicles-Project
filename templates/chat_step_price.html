@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}EV Chatbot Assistant{% endblock %}
+{% block content %}
+    <h1>💬 EV Conversational Assistant</h1>
+
+    <div id="nav-link">
+        <a href="{{ url_for('home') }}">← Back to Main Form</a>
+    </div>
+
+    <p>Welcome! I can help you find your perfect EV segment. Let's go one question at a time.</p>
+
+    <form action="{{ url_for('chat_range') }}" method="POST">
+        <h2>Step 1 of 2</h2>
+        <div class="input-group">
+            <label for="PriceEuro">What's your max price (€)?</label>
+            <input type="number" id="PriceEuro" name="PriceEuro" value="45000" required>
+        </div>
+        <button type="submit">Next →</button>
+    </form>
+{% endblock %}

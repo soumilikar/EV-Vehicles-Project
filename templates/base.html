@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}EV Segment Recommender{% endblock %}</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            color: #333;
+            background-image: url("{{ url_for('static', filename='ev_background.jpg') }}");
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-color: #f4f7f6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #004d40;
+            border-bottom: 2px solid #004d40;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #00796b;
+            margin-top: 25px;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .input-group input,
+        .input-group select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            padding: 12px 25px;
+            background-color: #004d40;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #00695c;
+        }
+
+        #results {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(224, 242, 241, 0.9);
+            border-radius: 8px;
+        }
+
+        .segment-badge {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        .car-card {
+            border: 1px solid #b2dfdb;
+            background-color: #ffffff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .car-card h4 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        .error-box {
+            background-color: #fdecea;
+            border: 1px solid #f5c2c0;
+            color: #7a1f1a;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        #nav-link {
+            display: block;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #nav-link a {
+            padding: 10px 20px;
+            background-color: #e0f7fa;
+            color: #004d40;
+            text-decoration: none;
+            border: 2px solid #004d40;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        #nav-link a:hover {
+            background-color: #b2ebf2;
+        }
+
+        .chat-recap {
+            background-color: #e0f7fa;
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    {% block content %}{% endblock %}
+</body>
+
+</html>

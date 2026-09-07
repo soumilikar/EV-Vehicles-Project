@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Prediction Results{% endblock %}
+{% block content %}
+    <h1>🚗 Prediction Results</h1>
+
+    <div id="nav-link">
+        <a href="{{ url_for('home') }}">← Back to Main Form</a>
+    </div>
+
+    {% if is_chat %}
+    <div class="chat-recap">
+        You told me: max budget <strong>€{{ '{:,.0f}'.format(price|float) }}</strong>,
+        min range <strong>{{ range_km|int }} km</strong>.
+    </div>
+    {% endif %}
+
+    <div id="results">
+        {% if error %}
+            <div class="error-box"><strong>Error:</strong> {{ error }}</div>
+        {% else %}
+            <div class="segment-badge">Predicted Segment: {{ segment }}</div>
+
+            {% if recommendations|length == 0 %}
+                <p>No models found in this segment that match your price filter.</p>
+            {% else %}
+                <h3>Top {{ recommendations|length }} Recommended Models:</h3>
+                {% for car in recommendations %}
+                <div class="car-card">
+                    <h4>{{ car.Brand }} {{ car.Model }}</h4>
+                    <p>Price: <strong>€{{ '{:,.0f}'.format(car.PriceEuro) }}</strong></p>
+                    <p>Range: {{ car.Range_Km }} km | 0-100km/h: {{ car.AccelSec }}s</p>
+                </div>
+                {% endfor %}
+            {% endif %}
+        {% endif %}
+    </div>
+{% endblock %}
