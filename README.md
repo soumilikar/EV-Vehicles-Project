@@ -2,7 +2,7 @@
 This project leverages the categorical nature of the data, especially the car's Segment and BodyStyle, to help potential buyers narrow down their choices early in the purchase funnel.
 
 ## Project Description
-The core of this project will be a Classification Model that predicts a car's market segment based on its technical specifications. This allows the system to guide users who know the performance they want but are unsure what type of car it defines (e.g., is a 400 km range high-end or standard?).
+The core of this project is Classification Model that predicts a car's market segment based on its technical specifications. This allows the system to guide users who know the performance they want but are unsure what type of car it defines (e.g., is a 400 km range high-end or standard?).
 
 * ***Project Goal:*** To build a Classification Model that predicts the Segment (e.g., C-Segment, B-Segment, E-Segment) of an electric vehicle based purely on its performance and efficiency features.
 * ***Model Type:*** Multi-Class Classification using a Decision Tree/Random Forest Classifier
